@@ -1,17 +1,22 @@
 import EventDetails from "@/components/EventDetails";
 import { Suspense } from "react";
 
+// Make sure params is treated as a Promise
 const EventDetailsPage = async ({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) => {
-  const slug = params.then((p) => p.slug);
+  // Await the params directly
+  const { slug } = await params;
 
   return (
     <main>
-      <Suspense fallback={<div>Loading...</div>}>
-        <EventDetails params={slug} />
+      {/* This Suspense boundary will catch the dynamic data fetching 
+          happening inside <EventDetails /> 
+      */}
+      <Suspense fallback={<div>Loading event details...</div>}>
+        <EventDetails slug={slug} />
       </Suspense>
     </main>
   );
