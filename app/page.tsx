@@ -9,6 +9,11 @@ const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 const page = async () => {
   "use cache";
   cacheLife("hours");
+  // Ensure BASE_URL has https:// protocol
+  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL?.startsWith("http")
+    ? process.env.NEXT_PUBLIC_BASE_URL
+    : `https://${process.env.NEXT_PUBLIC_BASE_URL || "dev-events-navy-omega.vercel.app"}`;
+
   const response = await fetch(`${BASE_URL}/api/events`);
   const { events } = await response.json();
   return (
