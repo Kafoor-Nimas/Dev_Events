@@ -116,93 +116,18 @@ project/
 
 ```
 
-
-## 🎯 Usage
-
-### Creating an Event
-
-1. Navigate to the "Create Event" page
-2. Fill in event details (name, description, date, location)
-3. Upload an event image
-4. Submit to publish your event
-
-### Browsing Events
-
-- View all upcoming events on the homepage
-- Click on any event card to see detailed information
-- Register for events with a single click
-
-### Managing Events
-
-- Edit your created events from the event detail page
-- Delete events you no longer need
-- Track registrations and engagement
-
-## 🔧 API Routes
-
-```
-
-GET /api/events # Get all events
-GET /api/events/:id # Get single event
-POST /api/events # Create new event
-PUT /api/events/:id # Update event
-DELETE /api/events/:id # Delete event
-POST /api/upload # Upload image to Cloudinary
-
-```
-
-## 📊 Analytics Features
-
-- Page view tracking
-- Event registration metrics
-- User engagement insights
-- Popular event categories
-- Performance optimization recommendations
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 🐛 Bug Reports & Support
-
-If you encounter any bugs or need assistance, join our active Discord community with over 50,000+ members where developers help each other out!
-
-[Discord Invite Link]
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 👨‍💻 Author
 
-**Your Name**
+**Nimas**
 
-- LinkedIn: [Your LinkedIn Profile]
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Portfolio: [your-portfolio.com]
+- LinkedIn: [www.linkedin.com/in/nimas-kafoor]
+- GitHub: [Kafoor-Nimas](https://github.com/Kafoor-Nimas/Dev_Events.git)
 
 ## 🙏 Acknowledgments
 
 - Next.js team for the amazing framework
 - Cloudinary for seamless image management
-- The 50k+ Discord community for support and guidance
 - Everyone who provided feedback and suggestions
-
-## 🔮 Future Enhancements
-
-- [ ] User authentication and profiles
-- [ ] Payment integration for paid events
-- [ ] Email notifications
-- [ ] Calendar integration
-- [ ] Advanced search and filtering
-- [ ] Social sharing features
-- [ ] Mobile app version
 
 ---
 
