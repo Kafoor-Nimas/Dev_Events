@@ -108,11 +108,11 @@ project/
 
 ### Home Page
 
-![Home Page](./images/home-page.png)
+![Home Page](/public/images/home-page.png)
 
 ### Event Page
 
-![Event Details](./images/event-page.png)
+![Event Page](/public/images/event-page.png)
 
 ```
 
