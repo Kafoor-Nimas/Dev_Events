@@ -36,7 +36,7 @@ A full-stack event management platform built with Next.js that enables seamless 
 
 ```bash
 git clone https://github.com/Kafoor-Nimas/Dev_Events.git
-cd event-platform
+cd project
 ```
 
 2. Install dependencies
@@ -53,7 +53,7 @@ Create a `.env.local` file in the root directory:
 
 ```env
 # Database
-DATABASE_URL=your_database_url
+MONGODB_URI=your_database_url
 
 # Cloudinary
 NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=your_cloud_name
@@ -61,7 +61,7 @@ CLOUDINARY_API_KEY=your_api_key
 CLOUDINARY_API_SECRET=your_api_secret
 
 # App URL
-NEXT_PUBLIC_APP_URL=http://localhost:3000
+NEXT_PUBLIC_BASE_URL=http://localhost:3000
 ```
 
 4. Run the development server
@@ -77,19 +77,18 @@ yarn dev
 ## 📁 Project Structure
 
 ```
-event-platform/
+project/
 ├── app/
 │   ├── api/              # API routes
-│   ├── events/           # Event pages
+│   ├── event/           # Event pages
 │   ├── layout.tsx        # Root layout
 │   └── page.tsx          # Home page
 ├── components/
 │   ├── EventCard.tsx     # Event display component
-│   ├── EventForm.tsx     # Event creation/edit form
+│   ├── BookEvent.tsx     # Book Event
 │   └── ...
 ├── lib/
-│   ├── database/         # Database utilities
-│   ├── cloudinary.ts     # Cloudinary configuration
+│   ├── actions/
 │   └── utils.ts          # Helper functions
 ├── public/               # Static assets
 ├── styles/               # Global styles
@@ -98,16 +97,25 @@ event-platform/
 
 ## 🛠️ Tech Stack
 
-- **Framework:** Next.js 14
-- **Language:** TypeScript / JavaScript
+- **Framework:** Next.js 16
+- **Language:** TypeScript
 - **Styling:** Tailwind CSS
 - **Image Management:** Cloudinary
-- **Database:** [Your database choice - MongoDB/PostgreSQL/etc.]
-- **Analytics:** [Your analytics tool]
+- **Database:** MongoDB
+- **Analytics:** PostHog
 
 ## 📸 Screenshots
 
-[Add screenshots of your application here]
+### Home Page
+
+![Home Page](./images/home-page.png)
+
+### Event Page
+
+![Event Details](./images/event-page.png)
+
+```
+
 
 ## 🎯 Usage
 
@@ -133,12 +141,14 @@ event-platform/
 ## 🔧 API Routes
 
 ```
-GET    /api/events          # Get all events
-GET    /api/events/:id      # Get single event
-POST   /api/events          # Create new event
-PUT    /api/events/:id      # Update event
-DELETE /api/events/:id      # Delete event
-POST   /api/upload          # Upload image to Cloudinary
+
+GET /api/events # Get all events
+GET /api/events/:id # Get single event
+POST /api/events # Create new event
+PUT /api/events/:id # Update event
+DELETE /api/events/:id # Delete event
+POST /api/upload # Upload image to Cloudinary
+
 ```
 
 ## 📊 Analytics Features
@@ -199,3 +209,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ⭐ If you found this project helpful, please consider giving it a star!
 
 Made with ❤️ and Next.js
+```
